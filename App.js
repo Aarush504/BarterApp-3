@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer, createSwitchNavigator,} from 'react-navigation';
 import SignUpScreen from './screens/SignUpScreeen';
 import { AppTabNavigator } from './components/AppTabNavigator'
+import { AppDrawerNavigator } from './components/AppDrawerNavigator';
 
 export default function App() {
   return (
@@ -13,7 +14,7 @@ export default function App() {
 
 const switchNavigator = createSwitchNavigator({
   SignUpScreen:{screen:SignUpScreen},
-  BottomTab:{screen:AppTabNavigator}
+  Drawer:{screen:AppDrawerNavigator}
 })
 
 const AppContainer= createAppContainer(switchNavigator);
